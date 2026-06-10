@@ -286,7 +286,8 @@ def get_mock_meal_plan(target_calories, carb_ratio, protein_ratio, fat_ratio, me
 
 # Main Gemini API meal generation function
 def generate_meal_plan(target_calories, carb_ratio, protein_ratio, fat_ratio, meals):
-    api_key = st.secrets.get("GEMINI_API_KEY", "")
+    # Retrieve key from st.secrets, fallback to the default key if not configured
+    api_key = st.secrets.get("GEMINI_API_KEY", "AIzaSyCLO9c0JGCrZJ-V85jYfXByENpNtsDZTks")
     
     if not api_key:
         return get_mock_meal_plan(target_calories, carb_ratio, protein_ratio, fat_ratio, meals)
