@@ -294,7 +294,7 @@ def generate_meal_plan(target_calories, carb_ratio, protein_ratio, fat_ratio, me
         
     try:
         genai.configure(api_key=api_key)
-        model = genai.GenerativeModel('gemini-1.5-flash')
+        model = genai.GenerativeModel('gemini-2.5-flash')
         
         prompt = f"""
 당신은 최고의 AI 맞춤 식단 플래너이자 공인 영양사입니다. 사용자의 목표 칼로리와 탄단지 비율, 그리고 사용자가 이미 입력한 식단 선호를 바탕으로 하루 식단 계획을 작성해 주세요.
